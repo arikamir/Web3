@@ -2,16 +2,20 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ master ]
+    branches: [ "master" ]
+
+
+
 
 jobs:
   build:
     runs-on: self-hosted
-
-  steps:
-   - uses: actions/checkout@v2
+    steps:
+      - uses: actions/checkout@v3
+      - name:  test
+        run: echo Hello World!
 
 
     
